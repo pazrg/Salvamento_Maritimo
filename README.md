@@ -1,6 +1,6 @@
 # Salvamento_Maritimo
 
-This is an angular js project for SASEMAR (also nown as Salvamento Maritimo).
+This is an angular js project for SASEMAR (also known as Salvamento Maritimo).
 This project was developed in 10 days, so it has a lot bugs to be resolved.
 
 It was initially developed with OpenLayers but finally chosen Leaflet instead 
