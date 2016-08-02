@@ -1,0 +1,15 @@
+<div class="row col-md-12">
+	<h2 class="example-title">Filter</h3>
+      <div class="btn-group-vertical">
+            <button type="button" class="btn btn-default" title="Campañas" ng-click="newPage()"><i><img src="/img/cargo-boat.png"></i></button>
+            <!-- <button type="button" class="btn btn-default" title="Show Noise" ng-click="showNoise()"><i><img src="/img/speaker.png"></i></button>-->
+            <button type="button" class="btn btn-default" title="Blow Noise" ng-click="blowNoise()"><i><img src="/img/speaker (1).png"></i></button>
+            <button type="button" class="btn btn-default" title="Smooth" ng-click="smooth()"><i><img src="/img/flat-iron.png"></i></button>
+            <button type="button" class="btn btn-default" title="Delete" ng-click="delete()"><i><img src="/img/garbage.png"></i></button>
+            <button type="button" class="btn btn-default" title="Graficas" ng-click="newPage3()"><i><img src="/img/statistics.png"></i></button>
+            
+      </div>
+      <leaflet lf-center="center" paths="gliderPaths" markers="gliderPoints" event-broadcast="events"></leaflet>
+      <p>Selection:<p>
+      <p ng-repeat ="glider in gliders| filter: {year: yearFilter, month: monthNameToNumb(monthFilter)}">{{glider.id}}|</p>
+</div>

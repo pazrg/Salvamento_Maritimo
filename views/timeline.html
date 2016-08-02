@@ -1,0 +1,38 @@
+<!-- timeline -->
+<div class="row row col-md-12">
+<h2 class="example-title">TimeLine</h2>
+<button type="button" class="btn btn-default timelineCargoButton" title="Campañas" ng-click="newPage()"><i><img src="/img/cargo-boat.png"></i></button>
+</div>
+<div class="row row col-md-12">
+	<div class="col-md-6">
+	<input type="text" ng-model="yearFilter" class="form-control" placeholder="filter by year"></input>
+	</div>
+	<div class="col-md-6">
+	<input type="text" ng-model="monthFilter" class="form-control" placeholder="filter by month"></input>
+	</div>
+</div>
+<div class="row row col-md-12">
+        <div class="row">
+		  <div class="col-md-12">
+			  <div class="timeline">
+				  <dl ng-repeat ="glider in glidersOrdered | filter: {year: yearFilter}| filter: {month: monthNameToNumb(monthFilter)}">
+					  <dt>{{monthNumbToName(glider.month)}} {{glider.year}}</dt>
+					  <dd ng-if="$even" class="pos-right clearfix">
+						  <div class="circ"></div>
+						  <div class="time"> {{glider.day}}</div>
+						  <div class="events">
+							    <leaflet id='firstVisu' lf-center="center" paths="gliderPaths" markers="gliderPoints" event-broadcast="events"></leaflet>
+						  </div>
+					  </dd>
+					  <dd ng-if="$odd" class="pos-left clearfix">
+						  <div class="circ"></div>
+						  <div class="time pull-left"> {{glider.day}}</div>
+						  <div class="events">
+							    <leaflet id='firstVisu' lf-center="center" paths="gliderPaths" markers="gliderPoints" event-broadcast="events"></leaflet>
+						  </div>
+					  </dd>
+				  </dl>  
+			  </div>
+		  </div>
+		</div>
+      </div>

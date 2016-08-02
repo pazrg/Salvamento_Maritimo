@@ -1,0 +1,25 @@
+<div class="row col-md-12">
+	<h2 class="example-title">Filter</h3>
+      <div class="btn-group-vertical">
+      		<button type="button" class="btn btn-default" title="Campañas" ng-click="newPage()"><i><img src="/img/cargo-boat.png"></i></button>
+            <button type="button" class="btn btn-default" ng-click="newPage2()"><i><img src="/img/repair-tools.png"></i></button>
+            <button type="button" class="btn btn-default" title="Graficas" ng-click="newPage3()"><i><img src="/img/statistics.png"></i></button>
+      </div>
+      <leaflet lf-center="center" paths="gliderPaths" markers="gliderPoints" event-broadcast="events"></leaflet>
+      <p>Selection:<p>
+      <p ng-repeat ="glider in gliders| filter: {year: yearFilter, month: monthNameToNumb(monthFilter)}">{{glider.id}}|</p>
+</div>
+<div class="row row col-md-12">
+	<div class="col-md-6">
+		<h3 class="example-title">Filter by calendar</h3>
+		<input type="text" ng-model="yearFilter" class="form-control calendar" placeholder="filter by year"></input>
+		<input type="text" ng-model="monthFilter" class="form-control calendar" placeholder="filter by month"></input>
+	</div>
+	<div class="col-md-6">
+		<h3 class="example-title">Filter by oceanographic varibles</h3>
+		<input type="text" ng-model="windFilter" class="form-control ocean" placeholder="filter by wind strenght(m/s)"></input>
+		<input type="text" ng-model="windDirFilter" class="form-control ocean" placeholder="filter by wind direction"></input>
+		<input type="text" ng-model="currentFilter" class="form-control ocean" placeholder="filter by current strenght(m/s)"></input>
+		<input type="text" ng-model="currentDirFilter" class="form-control ocean" placeholder="filter by current direction"></input>
+	</div>
+</div>

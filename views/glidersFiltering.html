@@ -1,0 +1,18 @@
+    <leaflet lf-center="center" paths="gliderPaths" markers="gliderPoints" event-broadcast="events"></leaflet>
+    <div class="col-md-2 filter-inputs">
+      <input type="text" id='year' class="form-control" placeholder="Filter by year"></input>
+      <p>{{yearFilter}}</p>
+    </div>
+    <div class="col-md-2 filter-inputs">  
+      <input type="text" id='month' class="form-control" placeholder="Filter by month"></input>
+      <p>{{monthFilter}}</p>
+    </div>
+    <div class="col-md-2 filter-inputs">  
+      <input type="text" id='day' class="form-control" placeholder="Filter by day"></input>
+      <p>{{dayFilter}}</p>
+    </div>
+    <div class="col-md-6">
+      <button type="button" class="btn btn-success button_map">SnapShot</button>
+      <button type="button" class="btn btn-info button_map" ng-click="loadPaths()">Fresh</button>
+      <button type="button" class="btn btn-primary button_map_JumpToProcess" ng-click="newPage()">JumpToProcess</button>
+    </div>

@@ -1,0 +1,14 @@
+    <leaflet lf-center="center" paths="gliderPaths" markers="gliderPoints" event-broadcast="events"></leaflet>
+    <div class="col-md-2 filter-inputs">
+      <input type="text" id='windStrength' class="form-control" placeholder="Filter by windStrength"></input>
+    </div>
+    <div class="col-md-2 filter-inputs">  
+      <input type="text" id='windDir' class="form-control" placeholder="Filter by wind direction"></input>
+    </div>
+    <div class="col-md-6">
+      <button type="button" class="btn btn-success button_map">SnapShot</button>
+      <button type="button" class="btn btn-info button_map" ng-click="loadPaths()">Fresh</button>
+      <button type="button" class="btn btn-primary button_map_JumpToProcess" ng-click="newPage()">JumpToProcess</button>
+    </div>
+    <div id="windRose" style="width: 480px; height: 400px;"><!-- Plotly chart will be drawn inside this DIV --></div>
+    <div id="histogram" style="width: 480px; height: 400px;"><!-- Plotly chart will be drawn inside this DIV --></div>
